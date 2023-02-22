@@ -54,3 +54,15 @@ def read_one(lname):
         abort(
             404, f"Person with last name {lname} not found"
         )
+        
+# update the information for a person in the PEOPLE dictionary based on their last name
+def update(lname, person):
+    if lname in PEOPLE:
+        PEOPLE[lname]["fname"] = person.get("fname", PEOPLE[lname]["fname"])
+        PEOPLE[lname]["timestamp"] = get_timestamp()
+        return PEOPLE[lname]
+    else:
+        abort(
+            404,
+            f"Person with last name {lname} not found"
+        )        
