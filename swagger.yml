@@ -13,6 +13,15 @@ servers:
 #Add a components block with schemas for a single person  
 components:
   schemas:
+#Swagger/OpenAPI specification for a parameter called "lname"  
+  parameters:
+    lname:
+      name: "lname"
+      description: "Last name of the person to get"
+      in: path
+      required: True
+      schema:
+        type: "string"
     Person:
       type: "object"
       required:
@@ -26,6 +35,18 @@ components:
 #define your API endpoints
 paths:
   /people:
+#Swagger/OpenAPI specification for a GET endpoint to retrieve information about a specific person, based on their last name  
+  /people/{lname}:
+    get:
+      operationId: "people.read_one"
+      tags:
+        - People
+      summary: "Read one person"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "200":
+          description: "Successfully read person"
     get:
 #Create a New Person    
     post:
