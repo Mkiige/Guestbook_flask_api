@@ -1,30 +1,11 @@
-# this code provides basic functionality for managing a list of people
-# including the ability to read all the people in the list along with their first and last names and timestamps
-
 from datetime import datetime
-from flask import abort
+
 from flask import abort, make_response
 
-# Create a new person
-def create(person):
-    lname = person.get("lname")
-    fname = person.get("fname", "")
-
-    if lname and lname not in PEOPLE:
-        PEOPLE[lname] = {
-            "lname": lname,
-            "fname": fname,
-            "timestamp": get_timestamp(),
-        }
-        return PEOPLE[lname], 201
-    else:
-        abort(
-            406,
-            f"Person with last name {lname} already exists",
-        )
 
 def get_timestamp():
     return datetime.now().strftime(("%Y-%m-%d %H:%M:%S"))
+
 
 PEOPLE = {
     "Fairy": {
@@ -41,41 +22,48 @@ PEOPLE = {
         "fname": "Easter",
         "lname": "Bunny",
         "timestamp": get_timestamp(),
-    }
+    },
 }
+
 
 def read_all():
     return list(PEOPLE.values())
 
-#function that retrieves information about a person based on their last name
+
+def create(person):
+    lname = person.get("lname")
+    fname = person.get("fname", "")
+
+    if lname and lname not in PEOPLE:
+        PEOPLE[lname] = {
+            "lname": lname,
+            "fname": fname,
+            "timestamp": get_timestamp(),
+        }
+        return PEOPLE[lname], 201
+    else:
+        abort(406, f"Person with last name {lname} already exists")
+
+
 def read_one(lname):
     if lname in PEOPLE:
         return PEOPLE[lname]
     else:
-        abort(
-            404, f"Person with last name {lname} not found"
-        )
-        
-# update the information for a person in the PEOPLE dictionary based on their last name
+        abort(404, f"Person with last name {lname} not found")
+
+
 def update(lname, person):
     if lname in PEOPLE:
         PEOPLE[lname]["fname"] = person.get("fname", PEOPLE[lname]["fname"])
         PEOPLE[lname]["timestamp"] = get_timestamp()
         return PEOPLE[lname]
     else:
-        abort(
-            404,
-            f"Person with last name {lname} not found"
-        )        
+        abort(404, f"Person with last name {lname} not found")
+
 
 def delete(lname):
     if lname in PEOPLE:
         del PEOPLE[lname]
-        return make_response(
-            f"{lname} successfully deleted", 200
-        )
+        return make_response(f"{lname} successfully deleted", 200)
     else:
-        abort(
-            404,
-            f"Person with last name {lname} not found"
-        )        
+        abort(404, f"Person with last name {lname} not found")
