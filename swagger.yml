@@ -1,27 +1,14 @@
-#file that specifies metadata about an API using the OpenAPI specification version 3.0.0.
-
 openapi: 3.0.0
 info:
   title: "RP Flask REST API"
   description: "An API about people and notes"
   version: "1.0.0"
-  
-#define the root path of your API
+
 servers:
   - url: "/api"
-  
-#Add a components block with schemas for a single person  
+
 components:
   schemas:
-#Swagger/OpenAPI specification for a parameter called "lname"  
-  parameters:
-    lname:
-      name: "lname"
-      description: "Last name of the person to get"
-      in: path
-      required: True
-      schema:
-        type: "string"
     Person:
       type: "object"
       required:
@@ -30,56 +17,26 @@ components:
         fname:
           type: "string"
         lname:
-          type: "string"  
-  
-#define your API endpoints
+          type: "string"
+  parameters:
+    lname:
+      name: "lname"
+      description: "Last name of the person to get"
+      in: path
+      required: True
+      schema:
+        type: "string"
+
 paths:
   /people:
-#Swagger/OpenAPI specification for a GET endpoint to retrieve information about a specific person, based on their last name  
-  /people/{lname}:
     get:
-      operationId: "people.read_one"
+      operationId: "people.read_all"
       tags:
-        - People
-      summary: "Read one person"
-      parameters:
-        - $ref: "#/components/parameters/lname"
+        - "People"
+      summary: "Read the list of people"
       responses:
         "200":
-          description: "Successfully read person"
-          
-   #This is a Swagger/OpenAPI specification for a PUT endpoint to update information about a specific person, based on their last name.        
-    put:
-      tags:
-        - People
-      operationId: "people.update"
-      summary: "Update a person"
-      parameters:
-        - $ref: "#/components/parameters/lname"
-      responses:
-        "200":
-          description: "Successfully updated person"
-      requestBody:
-        content:
-          application/json:
-            schema:
-              x-body-name: "person"
-              $ref: "#/components/schemas/Person" 
-              
-  #delete information about a specific person, based on their last name
-    delete:
-      tags:
-        - People
-      operationId: "people.delete"
-      summary: "Delete a person"
-      parameters:
-        - $ref: "#/components/parameters/lname"
-      responses:
-        "204":
-          description: "Successfully deleted person"
-          
-    get:
-#Create a New Person    
+          description: "Successfully read people list"
     post:
       operationId: "people.create"
       tags:
@@ -96,10 +53,40 @@ paths:
       responses:
         "201":
           description: "Successfully created person"
-      operationId: "people.read_all"
+  /people/{lname}:
+    get:
+      operationId: "people.read_one"
       tags:
-        - "People"
-      summary: "Read the list of people"
+        - People
+      summary: "Read one person"
+      parameters:
+        - $ref: "#/components/parameters/lname"
       responses:
         "200":
-          description: "Successfully read people list"
+          description: "Successfully read person"
+    put:
+      tags:
+        - People
+      operationId: "people.update"
+      summary: "Update a person"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "200":
+          description: "Successfully updated person"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              x-body-name: "person"
+              $ref: "#/components/schemas/Person"
+    delete:
+      tags:
+        - People
+      operationId: "people.delete"
+      summary: "Delete a person"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "204":
+          description: "Successfully deleted person"
