@@ -48,7 +48,7 @@ paths:
         "200":
           description: "Successfully read person"
           
-  #This is a Swagger/OpenAPI specification for a PUT endpoint to update information about a specific person, based on their last name.        
+   #This is a Swagger/OpenAPI specification for a PUT endpoint to update information about a specific person, based on their last name.        
     put:
       tags:
         - People
@@ -64,7 +64,20 @@ paths:
           application/json:
             schema:
               x-body-name: "person"
-              $ref: "#/components/schemas/Person"      
+              $ref: "#/components/schemas/Person" 
+              
+  #delete information about a specific person, based on their last name
+    delete:
+      tags:
+        - People
+      operationId: "people.delete"
+      summary: "Delete a person"
+      parameters:
+        - $ref: "#/components/parameters/lname"
+      responses:
+        "204":
+          description: "Successfully deleted person"
+          
     get:
 #Create a New Person    
     post:
