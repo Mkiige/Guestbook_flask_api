@@ -1,10 +1,8 @@
-# Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 1
+# Python REST APIs With Flask, Connexion, and SQLAlchemy 
 
-This repository holds the code for part one of the Real Python [Python REST APIs With Flask, Connexion, and SQLAlchemy](https://realpython.com/flask-connexion-rest-api) tutorial series.
+This repository holds the code for Python REST APIs With Flask, Connexion, and SQLAlchemy.
 
-## Real Python Flask REST API – Part 1
-
-You should first create a virtual environment:
+First create a virtual environment:
 
 ```console
 $ python -m venv venv
@@ -53,8 +51,4 @@ To see your home page, visit `http://127.0.0.1:8000`.
 
 ## Author
 
-- **Philipp Acsany**, E-mail: [philipp@realpython.com](philipp@realpython.com)
-
-## License
-
-Distributed under the MIT license. See [`LICENSE`](../LICENSE) for more information.
+- **Mary Kiige**, E-mail: [mkiige77@gmail.com]
