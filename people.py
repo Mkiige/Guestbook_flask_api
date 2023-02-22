@@ -45,3 +45,12 @@ PEOPLE = {
 
 def read_all():
     return list(PEOPLE.values())
+
+#function that retrieves information about a person based on their last name
+def read_one(lname):
+    if lname in PEOPLE:
+        return PEOPLE[lname]
+    else:
+        abort(
+            404, f"Person with last name {lname} not found"
+        )
