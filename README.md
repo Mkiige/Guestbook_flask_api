@@ -22,7 +22,7 @@ Then, navigate into the `rp_flask_api/` folder and start the development web ser
 (venv) $ python app.py
 ```
 
-![image](C:\Users\HP\Downloads/Web capture_22-2-2023_122126_127.0.0.1.jpeg)
+#![image](C:\Users\HP\Downloads/Web capture_22-2-2023_122126_127.0.0.1.jpeg)
 To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger UI API documentation on `http://127.0.0.1:8000/api/ui`.
 
 ## Flask Starter
@@ -48,7 +48,7 @@ You can start your Flask development server by running `app.py` as a script:
 (venv) $ python app.py
 ```
 
-![image](C:\Users\HP\Downloads/Web capture_22-2-2023_14447_localhost.jpeg)
+#![image](C:\Users\HP\Downloads/Web capture_22-2-2023_14447_localhost.jpeg)
 To see your home page, visit `http://127.0.0.1:8000`.
 
 ## Author
