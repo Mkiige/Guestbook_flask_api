@@ -1,3 +1,5 @@
+#This is a Python code that uses the Flask web framework to create a simple web application.
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
