@@ -1,3 +1,6 @@
+# This is an OpenAPI specification written in version 3.0.0. 
+# It defines the endpoints and their parameters for a Flask REST API that handles information about people and notes.
+
 openapi: 3.0.0
 info:
   title: "RP Flask REST API"
@@ -7,6 +10,7 @@ info:
 servers:
   - url: "/api"
 
+# reusable schema and parameter definitions that can be used in multiple places within the API.
 components:
   schemas:
     Person:
@@ -27,8 +31,10 @@ components:
       schema:
         type: "string"
 
+# API endpoints, including their HTTP methods, operation IDs, tags, and parameters.
 paths:
   /people:
+# read the list of people  
     get:
       operationId: "people.read_all"
       tags:
@@ -37,6 +43,7 @@ paths:
       responses:
         "200":
           description: "Successfully read people list"
+#  create a new person          
     post:
       operationId: "people.create"
       tags:
@@ -54,6 +61,7 @@ paths:
         "201":
           description: "Successfully created person"
   /people/{lname}:
+# read one person  
     get:
       operationId: "people.read_one"
       tags:
@@ -64,6 +72,7 @@ paths:
       responses:
         "200":
           description: "Successfully read person"
+# update a person          
     put:
       tags:
         - People
@@ -80,6 +89,7 @@ paths:
             schema:
               x-body-name: "person"
               $ref: "#/components/schemas/Person"
+# delete a person              
     delete:
       tags:
         - People
@@ -90,3 +100,6 @@ paths:
       responses:
         "204":
           description: "Successfully deleted person"
+          
+# this OpenAPI specification provides a clear and organized way to define the endpoints of the Flask REST API
+# making it easier for clients to understand how to use the API and what to expect from it.          
