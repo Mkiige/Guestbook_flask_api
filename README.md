@@ -15,7 +15,7 @@ Install the pinned dependencies from `requirements.txt`:
 (venv) $ python -m pip install -r requirements.txt
 ```
 
-Then, navigate into the `rp_flask_api/` folder and start the development web server:
+Then, navigate into the `Guestbook_flask_api/` folder and start the development web server:
 
 ```console
 (venv) $ cd rp_flask_api
