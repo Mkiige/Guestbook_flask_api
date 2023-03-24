@@ -49,7 +49,7 @@ You can start your Flask development server by running `app.py` as a script:
 
 To see your home page, visit `http://127.0.0.1:8000`.
 
-# Python REST APIs With Flask, Connexion, and SQLAlchemy – Database Persistence
+#  Database Persistence
 
 ## Database Persistence
 
@@ -110,9 +110,9 @@ Navigate inside the `Guestbook_flask_api/`, enter the [Python interactive shell]
 
 This will create a database named `people.db` that you can use with your project.
 
-# Python REST APIs With Flask, Connexion, and SQLAlchemy – Database relation
+#  Database relation
 
-## Real Python Flask REST API – Database relation
+## Database relation
 
 You should first create a virtual environment:
 
