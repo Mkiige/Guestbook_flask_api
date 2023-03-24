@@ -1,8 +1,6 @@
-# Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 2
+# Python REST APIs With Flask, Connexion, and SQLAlchemy – Database Persistence
 
-This repository holds the code for part two of the Real Python [Python REST APIs With Flask, Connexion, and SQLAlchemy](https://realpython.com/flask-connexion-rest-api-part-2) tutorial series.
-
-## Real Python Flask REST API – Part 2
+## Database Persistence
 
 You should first create a virtual environment:
 
@@ -17,10 +15,10 @@ Install the pinned dependencies from `requirements.txt`:
 (venv) $ python -m pip install -r requirements.txt
 ```
 
-Then, navigate into the `rp_flask_api/` folder:
+Then, navigate into the `Guestbook_flask_api/` folder:
 
 ```console
-(venv) $ cd rp_flask_api
+(venv) $ cd Guestbook_flask_api
 (venv) $ python app.py
 ```
 
@@ -30,7 +28,7 @@ To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger U
 
 You can build a SQLite database with content by following the commands below.
 
-Navigate inside the `rp_flask_api/`, enter the [Python interactive shell](https://realpython.com/interacting-with-python/) and run the commands below:
+Navigate inside the `Guestbook_flask_api/`, enter the [Python interactive shell](https://realpython.com/interacting-with-python/) and run the commands below:
 
 ```pycon
 >>> import sqlite3
@@ -63,7 +61,7 @@ This will create a database named `people.db` that you can use with your project
 
 ## Author
 
-- **Philipp Acsany**, E-mail: [philipp@realpython.com](philipp@realpython.com)
+- **Mary Kiige**, E-mail: [mkiige77@gmail.com]
 
 ## License
 
