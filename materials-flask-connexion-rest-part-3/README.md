@@ -1,6 +1,6 @@
 # Python REST APIs With Flask, Connexion, and SQLAlchemy – Database relation
 
-## Real Python Flask REST API – Database relation
+##  Database relation
 
 You should first create a virtual environment:
 
