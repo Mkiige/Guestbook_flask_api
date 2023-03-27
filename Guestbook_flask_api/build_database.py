@@ -8,12 +8,12 @@ PEOPLE_NOTES = [
         "lname": "Fairy",
         "fname": "Tooth",
         "notes": [
-            ("I brush my teeth after each meal.", "2022-01-06 17:10:24"),
+            ("I brush my teeth after each meal.", "2023-03-27 14:50:24"),
             (
                 "The other day a friend said, I have big teeth.",
-                "2022-03-05 22:17:54",
+                "2023-03-27 14:50:54",
             ),
-            ("Do you pay per gram?", "2022-03-05 22:18:10"),
+            ("Do you pay per gram?", "2023-03-27 14:51:10"),
         ],
     },
     {
@@ -22,11 +22,11 @@ PEOPLE_NOTES = [
         "notes": [
             (
                 "I swear, I'll do better this year.",
-                "2022-01-01 09:15:03",
+                "2023-03-27 14:51:15",
             ),
             (
                 "Really! Only good deeds from now on!",
-                "2022-02-06 13:09:21",
+                "2023-03-27 14:52:21",
             ),
         ],
     },
@@ -36,9 +36,9 @@ PEOPLE_NOTES = [
         "notes": [
             (
                 "Please keep the current inflation rate in mind!",
-                "2022-01-07 22:47:54",
+                "2023-03-27 14:52:54",
             ),
-            ("No need to hide the eggs this time.", "2022-04-06 13:03:17"),
+            ("No need to hide the eggs this time.", "2023-03-27 14:53:17"),
         ],
     },
 ]
