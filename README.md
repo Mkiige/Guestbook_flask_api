@@ -79,7 +79,7 @@ To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger U
 
 You can build a SQLite database with content by following the commands below.
 
-Navigate inside the `Guestbook_flask_api/`, enter the [Python interactive shell] and run the commands below:
+Navigate inside the `Guestbook_flask_api/`, enter the Python interactive shell and run the commands below:
 
 ```pycon
 >>> import sqlite3
