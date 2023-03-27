@@ -22,6 +22,8 @@ Then, navigate into the `Guestbook_flask_api/` folder and start the development 
 (venv) $ python app.py
 ```
 
+![hello](./assets/hello.jpeg)
+
 To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger UI API documentation on `http://127.0.0.1:8000/api/ui`.
 
 ## Flask Starter
@@ -46,7 +48,7 @@ You can start your Flask development server by running `app.py` as a script:
 ```console
 (venv) $ python app.py
 ```
-
+![](./assets/api.jpeg)
 To see your home page, visit `http://127.0.0.1:8000`.
 
 #  Database Persistence
