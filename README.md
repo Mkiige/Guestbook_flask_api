@@ -1,5 +1,9 @@
 # Python REST APIs With Flask, Connexion, and SQLAlchemy 
 
+![](./assets/web2.jpeg)
+ 
+ I chose to build my website to give an overview of how it should look.
+
 This repository holds the code for Python REST APIs With Flask, Connexion, and SQLAlchemy.
 
 First create a virtual environment:
@@ -75,7 +79,8 @@ Then, navigate into the `Guestbook_flask_api/` folder:
 (venv) $ python app.py
 ```
 
-To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger UI API documentation on `http://127.0.0.1:8000/api/ui`.
+![](./assets/web1.jpeg)
+ My website on desktop.
 
 ### Optional: Build the Database
 
@@ -135,8 +140,8 @@ Then, navigate into the `Guestbook/` folder:
 (venv) $ cd Guestbook_flask_api
 (venv) $ python app.py
 ```
-
-To see your home page, visit `http://127.0.0.1:8000`. You can find the Swagger UI API documentation on `http://127.0.0.1:8000/api/ui`.
+<img src="./assets/web3.jpeg">
+My website on mobile.
 
 ### Optional: Build the Database
 
@@ -149,6 +154,10 @@ Navigate into the `Guestbook_flask_api/` folder:
 ```
 
 This will delete any existing database and create a new database named `people.db` that you can use with your project.
+
+<img src="./assets/web5.jpeg">
+
+My website on mobile.
 
 ## Author
 
