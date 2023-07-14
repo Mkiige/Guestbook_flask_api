@@ -1,7 +1,5 @@
 from datetime import datetime
-
 from marshmallow_sqlalchemy import fields
-
 from config import db, ma
 
 
