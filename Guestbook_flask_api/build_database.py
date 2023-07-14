@@ -4,40 +4,40 @@ from models import Note, Person
 
 PEOPLE_NOTES = [
     {
-        "lname": "Fairy",
-        "fname": "Tooth",
+        "lname": "Zeddy",
+        "fname": "Cherry",
         "notes": [
-            ("I brush my teeth after each meal.", "2023-03-26 17:10:24"),
+            ("Pool party at mines.", "2023-07-14 17:10:24"),
             (
-                "The other day a friend said, I have big teeth.",
-                "2023-03-26 22:17:54",
+                "How about a roadtrip next month?.",
+                "2023-07-14 22:17:54",
             ),
-            ("Do you pay per gram?", "2023-03-26 22:18:10"),
+            ("Do you pay love hiking?", "2023-03-26 22:18:10"),
         ],
     },
     {
-        "lname": "Ruprecht",
-        "fname": "Knecht",
+        "lname": "Raph",
+        "fname": "Kim",
         "notes": [
             (
-                "I swear, I'll do better this year.",
-                "2023-03-27 09:15:03",
+                "I swear, I'll get it done.",
+                "2023-07-15 09:15:03",
             ),
             (
-                "Really! Only good deeds from now on!",
-                "2023-03-27 13:09:21",
+                "Website done!",
+                "2023-07-14 13:09:21",
             ),
         ],
     },
     {
-        "lname": "Bunny",
-        "fname": "Easter",
+        "lname": "Ree",
+        "fname": "Sab",
         "notes": [
             (
-                "Please keep the current inflation rate in mind!",
-                "2023-03-27 22:47:54",
+                "Remember the email!",
+                "2023-07-16 22:47:54",
             ),
-            ("No need to hide the eggs this time.", "2022-04-06 13:03:17"),
+            ("No need to hide the eggs this time.", "2023-07-16 13:03:17"),
         ],
     },
 ]
