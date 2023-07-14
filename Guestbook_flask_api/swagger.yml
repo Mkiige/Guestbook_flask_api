@@ -159,3 +159,4 @@ paths:
       responses:
         "204":
           description: "Successfully deleted note"
+          
