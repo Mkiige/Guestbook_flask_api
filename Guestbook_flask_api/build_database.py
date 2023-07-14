@@ -1,5 +1,4 @@
 from datetime import datetime
-
 from config import app, db
 from models import Note, Person
 
